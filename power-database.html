@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RV & Camping Appliance Power Consumption Database (2026)</title>
+  <meta name="description" content="A reference table of typical running wattage, surge/startup watts, and estimated daily watt-hours for common RV, vanlife, and camping devices — fridges, Starlink, AC, CPAP, induction, and more. Free to cite." />
+  <style>
+    :root { --bg:#0f1420; --card:#171e2e; --ink:#e8edf5; --muted:#9aa7bd; --accent:#ffb020; --line:#27324a; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+    .wrap { max-width:960px; margin:0 auto; padding:48px 20px 64px; }
+    header h1 { font-size:28px; margin:0 0 8px; }
+    header p.sub { color:var(--muted); margin:0 0 4px; }
+    .note { color:var(--muted); font-size:14px; margin:14px 0 28px; }
+    h2 { font-size:20px; border-left:4px solid var(--accent); padding-left:10px; margin:36px 0 14px; }
+    table { width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:14px; }
+    th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { color:var(--accent); font-weight:700; background:var(--card); position:sticky; top:0; }
+    tbody tr:nth-child(even) { background:rgba(255,255,255,0.02); }
+    td.wh { color:#7fd1a0; font-weight:600; white-space:nowrap; }
+    .tag { color:var(--muted); font-size:13px; }
+    a { color:var(--accent); text-decoration:none; font-weight:600; }
+    a:hover { text-decoration:underline; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:14px 0; }
+    code { background:#0b0f18; padding:2px 6px; border-radius:5px; color:#ffd479; font-size:13px; }
+    footer { color:var(--muted); font-size:13px; margin-top:48px; border-top:1px solid var(--line); padding-top:18px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>RV &amp; Camping Appliance Power Database ⚡</h1>
+      <p class="sub">Typical wattage, surge, and estimated daily energy for common off-grid devices.</p>
+      <p class="note">Maintained by the <a href="https://camppowercalc.com/en/">CampPowerCalc</a> team · Last updated: September 2026 · Free to cite with attribution.</p>
+    </header>
+
+    <div class="card">
+      <strong>How to read this table</strong>
+      <ul style="margin:8px 0 0; padding-left:20px; color:var(--muted);">
+        <li><strong>Running (W)</strong> — typical draw while the device is actively operating.</li>
+        <li><strong>Surge (W)</strong> — brief startup spike (compressor motors, AC); matters for inverter/soft-start sizing.</li>
+        <li><strong>Daily Wh</strong> — estimated energy over a typical day of use. Fridges run 24h; cooktops run minutes.</li>
+        <li>Values are <em>typical ranges</em> from manufacturer specs and field reports. Always confirm against your unit's label before building a system.</li>
+      </ul>
+    </div>
+
+    <h2>📊 The Database</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Running (W)</th>
+          <th>Surge (W)</th>
+          <th>Typical daily use</th>
+          <th>Est. Daily Wh</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>12V Compressor Fridge (40–50 L)</td><td>45–60 (cycling)</td><td>80–120</td><td>24 h (duty ~30%)</td><td class="wh">400–1000</td><td class="tag">Most efficient fridge type; ~720 Wh typical.</td></tr>
+        <tr><td>Residential Fridge (120V, large RV)</td><td>150–250</td><td>400–600</td><td>24 h (duty ~25%)</td><td class="wh">1200–2500</td><td class="tag">Needs inverter; less efficient than 12V compressor.</td></tr>
+        <tr><td>Starlink Mini</td><td>20–40</td><td>40–60</td><td>24 h (avg ~30W)</td><td class="wh">~720</td><td class="tag">12–48V DC native; no inverter needed.</td></tr>
+        <tr><td>Starlink Standard (Gen 3)</td><td>50–75</td><td>100–150</td><td>12 h avg</td><td class="wh">~780 (12h) / ~1560 (24h)</td><td class="tag">48–57V; needs DC-DC or inverter.</td></tr>
+        <tr><td>CPAP (no humidifier)</td><td>30–40</td><td>—</td><td>8 h</td><td class="wh">~280</td><td class="tag">Heated hose adds ~10–20W.</td></tr>
+        <tr><td>CPAP (with humidifier)</td><td>60–90</td><td>—</td><td>8 h</td><td class="wh">~600</td><td class="tag"></td></tr>
+        <tr><td>RV Roof AC — 13,500 BTU</td><td>1200–1500</td><td>2500–3500</td><td>8 h cooling (duty ~40%)</td><td class="wh">4000–7000</td><td class="tag">Largest 120V load; soft start recommended.</td></tr>
+        <tr><td>RV Roof AC — 15,000 BTU</td><td>1400–1700</td><td>2800–4000</td><td>8 h cooling (duty ~40%)</td><td class="wh">4500–8000</td><td class="tag"></td></tr>
+        <tr><td>DC Mini-Split AC (12V/24V)</td><td>400–1000</td><td>low</td><td>8 h (duty ~40%)</td><td class="wh">1000–2500</td><td class="tag">Efficient off-grid cooling option.</td></tr>
+        <tr><td>Vent Fan (Maxxair-type)</td><td>3–20 (by speed)</td><td>—</td><td>6 h</td><td class="wh">50–150</td><td class="tag">~90 Wh typical.</td></tr>
+        <tr><td>LED Interior Lights</td><td>10–30 (total)</td><td>—</td><td>5 h</td><td class="wh">50–150</td><td class="tag">~100 Wh typical.</td></tr>
+        <tr><td>Laptop</td><td>50–65</td><td>—</td><td>5 h</td><td class="wh">250–400</td><td class="tag"></td></tr>
+        <tr><td>Phone (USB-C charge)</td><td>10–18</td><td>—</td><td>2 h</td><td class="wh">20–40</td><td class="tag"></td></tr>
+        <tr><td>Induction Cooktop</td><td>1500–1800</td><td>—</td><td>0.4 h</td><td class="wh">600–900</td><td class="tag"></td></tr>
+        <tr><td>Microwave</td><td>1000–1200</td><td>—</td><td>0.2 h</td><td class="wh">200–350</td><td class="tag"></td></tr>
+        <tr><td>Electric Kettle</td><td>1200–1500</td><td>—</td><td>0.15 h</td><td class="wh">180–250</td><td class="tag"></td></tr>
+        <tr><td>12V Water Pump</td><td>40–55</td><td>—</td><td>0.5 h (bursts)</td><td class="wh">20–60</td><td class="tag"></td></tr>
+        <tr><td>Diesel Heater (12V)</td><td>15–40</td><td>—</td><td>4 h</td><td class="wh">100–300</td><td class="tag">Fan + fuel pump; 12V DC.</td></tr>
+        <tr><td>LED TV (12V/DC)</td><td>30–50</td><td>—</td><td>3 h</td><td class="wh">90–150</td><td class="tag"></td></tr>
+        <tr><td>MacBook (charging)</td><td>60–100</td><td>—</td><td>4 h</td><td class="wh">240–400</td><td class="tag"></td></tr>
+        <tr><td>Inverter overhead</td><td>10–15% of load</td><td>—</td><td>—</td><td class="wh">add to total</td><td class="tag">Conversion loss; size inverter 20–30% over load.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="card">
+      <strong>Worked example — typical weekend van (1 person)</strong><br />
+      <span class="tag">Fridge 720 + Starlink Mini 720 + Lights 100 + Laptop 300 + Phone 30 + Fan 90 + Water pump 40 + CPAP 280 ≈ <strong style="color:#7fd1a0">2,280 Wh/day</strong>.</span><br />
+      Add ~12% inverter loss → plan for ~2,550 Wh/day when sizing battery + solar. Run your exact setup through the
+      <a href="https://camppowercalc.com/en/calculator/van-solar-sizing/">Van &amp; RV Solar Sizing calculator →</a>
+    </div>
+
+    <h2>🛠 Methodology &amp; Sources</h2>
+    <p class="tag" style="color:var(--muted)">
+      Figures are typical ranges compiled from manufacturer specification sheets and aggregated field reports (RV AC and Starlink data cross-checked against
+      Starlink support documentation and multiple RV power draw teardowns; 12V compressor fridge duty-cycle data from BLUETTI, Jackery, and DIY solar community logs, 2024–2026).
+      Real devices vary with ambient temperature, thermostat setting, age, and usage. Treat this as a planning baseline, not a substitute for measuring your own rig with a shunt or Kill-A-Watt.
+    </p>
+
+    <h2>⬇️ Download</h2>
+    <p><a href="power-database.csv">power-database.csv</a> — the full table as comma-separated values for spreadsheets and calculators.</p>
+
+    <footer>
+      This database is provided for reference. Always verify electrical specs against manufacturer data before building or modifying a system.
+      Maintained by <a href="https://camppowercalc.com/en/">CampPowerCalc</a>. Free to cite with attribution.
+    </footer>
+  </div>
+</body>
+</html>

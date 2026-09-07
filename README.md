@@ -35,7 +35,7 @@ A curated list of **free tools, calculators, datasets, guides, and communities**
 
 ## 📊 Datasets
 
-- *RV & Camping Appliance Power Database* — a measured typical-wattage table for common devices. (Publishing soon — will live on the CampPowerCalc site and be citable from here.)
+- [RV & Camping Appliance Power Database](power-database.html) — typical running/surge watts and estimated daily Wh for fridges, Starlink, AC, CPAP, cooking, and more. Free to cite (also as [CSV](power-database.csv)).
 
 ## 🤝 Contributing
 
