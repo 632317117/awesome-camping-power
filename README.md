@@ -9,6 +9,7 @@ A curated list of **free tools, calculators, datasets, guides, and communities**
 ## 🔌 Calculators
 
 - [CampPowerCalc — RV & Camping Power Calculator](https://camppowercalc.com/en/) — Interactive off-grid load sizing and solar / battery / inverter planning for vanlife, RV, and tent camping.
+- [PowerStation Size](https://powerstationsize.com/calculator/) — Portable power station calculator. Capacity, continuous watts, and inverter surge checked separately; boost ratings do not clear a fridge compressor.
 - [Van & RV Solar Sizing](https://camppowercalc.com/en/calculator/van-solar-sizing/) — Size roof panels from your real daily usage.
 - [Camper Battery Size](https://camppowercalc.com/en/calculator/camper-battery-size/) — LiFePO4 / Ah sizing from the appliances you actually run.
 - [Campervan Inverter](https://camppowercalc.com/en/calculator/campervan-inverter/) — Pick inverter size from your load, with surge headroom.
